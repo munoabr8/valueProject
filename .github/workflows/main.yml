@@ -19,9 +19,12 @@ jobs:
           distribution: 'temurin'
           cache: maven
                
-      - name: Check out code and Run Checkstyle
+      - name: Check out code
         uses: actions/checkout@v3
-          with:ref:main
-         run >
-           mvn -B package --file root/pom.xml
-           mvn checkstyle:check
+        with:
+          ref: main  # or specify the branch or tag you want to check out
+
+      - name: Run Checkstyle
+        run: |
+          mvn -B package --file root/pom.xml
+          mvn checkstyle:check

@@ -19,8 +19,7 @@
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Check out code
-      uses: actions/checkout@v2
+ 
 
 
     - name: Check Git Status

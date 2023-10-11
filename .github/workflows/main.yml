@@ -1,0 +1,29 @@
+name: Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-analysis:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check Out Code
+        run: |
+          git clone https://github.com/${{ github.repository }}.git
+          cd ${{ github.repository }}
+          git checkout ${{ github.ref }}
+      
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+          java-version: '18'
+          distribution: 'temurin'
+          cache: maven
+               
+      - name: Check out code and Run Checkstyle
+        run: |
+          mvn -B package --file root/pom.xml
+          mvn checkstyle:check

@@ -13,8 +13,7 @@
 
 	<scm>
 <connection>scm:git:https://github.com/munoabr8/valueProject.git</connection>
-		<url>https://github.com/munoabr8/valueProject</url>
-	</scm>
+ 	</scm>
 
 
 	<build>
@@ -29,6 +28,7 @@
 						<git>native</git>
 					</providerImplementations>
 
+		<connectionUrl>https://github.com/munoabr8/valueProject</connectionUrl>
 
 					<connectionType>connection</connectionType>
 

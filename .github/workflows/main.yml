@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Get list of projects using SCM 
-        run: mvn scm:list --file root/pom.xml
+        run: mvn scm:status --file root/pom.xml
         
  

@@ -12,7 +12,7 @@
 
 
 	<scm>
-
+<connection>scm:git:https://github.com/munoabr8/valueProject.git</connection>
 		<url>https://github.com/munoabr8/valueProject</url>
 	</scm>
 
@@ -30,7 +30,7 @@
 					</providerImplementations>
 
 
-					<connectionType>url</connectionType>
+					<connectionType>connection</connectionType>
 
 					<scmVersion>main</scmVersion>
 

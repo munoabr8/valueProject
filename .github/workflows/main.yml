@@ -1,0 +1,19 @@
+name: Maven SCM validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Validate SCM connection
+        run: mvn scm:validate
+ 

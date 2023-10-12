@@ -26,6 +26,8 @@
 				<version>2.0.1</version>
 				<configuration>
 
+
+        <connectionUrl>https://github.com/munoabr8/valueProject.git</connectionUrl>
 					<connectionType>url</connectionType>
 
 					<scmVersion>main</scmVersion>

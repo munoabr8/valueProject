@@ -20,7 +20,12 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
-
+        
+    - name: Add SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
 
     - name: Build, site,stage publish  with Maven
       run: mvn -B clean package --file root/pom.xml site:site site:stage scm-publish:publish-scm

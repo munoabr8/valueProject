@@ -20,12 +20,21 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
-        
-    - name: Add SSH key
+
+
+    - name: Start SSH agent
+      run: eval $(ssh-agent -s)
+
+    - name: Add SSH key to the agent
       run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519 
-        chmod 600 ~/.ssh/id_ed25519
+        echo "$SSH_PRIVATE_KEY" | ssh-add -
+       
+    
+   # - name: Add SSH key
+     # run: |
+      #  mkdir -p ~/.ssh
+      #  echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519 
+      #  chmod 600 ~/.ssh/id_ed25519
 
     - name: List SSH keys
       run: ls -la ~/.ssh 

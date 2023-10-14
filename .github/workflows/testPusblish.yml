@@ -21,6 +21,16 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
+    - name: Debug SSH Key
+      run: |
+       echo "SSH_PRIVATE_KEY:"
+       echo "$SSH_PRIVATE_KEY"
+       echo "Output of echo:"
+       echo $SSH_PRIVATE_KEY
+
+    - name: Add SSH key to the agent
+      run: |
+       echo $SSH_PRIVATE_KEY | ssh-add -
 
     - name: Start SSH agent
       run: eval $(ssh-agent -s)

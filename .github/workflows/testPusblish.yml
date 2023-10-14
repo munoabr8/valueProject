@@ -24,12 +24,13 @@ jobs:
     - name: Add SSH key
       run: |
         mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519 
         chmod 600 ~/.ssh/id_ed25519
 
     - name: List SSH keys
-      run: ls -la ~/.ssh
+      run: ls -la ~/.ssh 
 
-
+    - name: List the loaded identities in the SSH agent
+      run : ssh-add -l
    # - name: Build, site,stage publish  with Maven
      # run: mvn -B clean package --file root/pom.xml site:site site:stage scm-publish:publish-scm

@@ -25,10 +25,6 @@ jobs:
     - name: Start SSH agent
       run: eval $(ssh-agent -s)
 
-    - name: Add SSH key to the agent
-      run: |
-        echo "$SSH_PRIVATE_KEY" | ssh-add -
-       
     
    # - name: Add SSH key
      # run: |
@@ -41,5 +37,12 @@ jobs:
 
     - name: List the loaded identities in the SSH agent
       run : ssh-add -l
+      
+    #- name: Add SSH key to the agent
+     # run: |
+     #   echo "$SSH_PRIVATE_KEY" | ssh-add -
+       
+
+      
    # - name: Build, site,stage publish  with Maven
      # run: mvn -B clean package --file root/pom.xml site:site site:stage scm-publish:publish-scm

@@ -23,6 +23,6 @@ jobs:
 
 
     - name: Build, site,stage publish  with Maven
-      run: mvn -B clean site:site site:stage scm-publish:publish-scm
+      run: mvn -B clean package--file pom.xml site:site site:stage scm-publish:publish-scm
  
 

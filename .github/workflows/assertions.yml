@@ -1,0 +1,43 @@
+name: Maven assertions
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  build:
+
+    runs-on: macOS-latest  # Use macOS runner
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+     - name: Set up JDK 18
+       uses: actions/setup-java@v3
+       with:
+        java-version: '18'
+        distribution: 'temurin'
+        cache: 'maven'
+
+     - name: Build and Test
+       run: mvn clean verify
+
+    # - name: Code Quality Analysis
+    #   run: mvn sonar:sonar
+
+     - name: Check Code Coverage
+       run: mvn jacoco:check
+
+    # - name: Dependency Check
+    #   run: mvn org.owasp:dependency-check-maven:check
+
+     - name: Custom Checks
+       run: |
+          # Add custom checks here
+          # For example, check coding standards or custom rules
+
+     - name: Artifact Deployment
+       run: |
+          # Deploy artifacts to your repository or distribution management system

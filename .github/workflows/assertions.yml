@@ -22,7 +22,7 @@ jobs:
         cache: 'maven'
 
      - name: Build and Test
-       run: mvn clean verify  --file pom.xml
+       run: mvn clean verify  --file root/pom.xml
 
     # - name: Code Quality Analysis
     #   run: mvn sonar:sonar

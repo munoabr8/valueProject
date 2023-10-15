@@ -20,6 +20,7 @@
 		<site>
 			<id>Change me</id>
 
+ 
 			<url>https://munoabr8.github.io/valueProject/</url>
 
 		</site>
@@ -31,16 +32,26 @@
 			<url>https://maven.pkg.github.com/munoabr8/valueProject.git</url>
 		</repository>
 
+ 
+			<url>scm:git:ssh://git@github.com:/munoabr8/valueProject.git</url>
+
+		</site>
+
+ 
 	</distributionManagement>
 
 
 	<scm>
+ 
 		<url>https://github.com/munoabr8/valueProject</url>
 
 
 		<connection>scm:git:https://github.com/munoabr8/valueProject.git</connection>
 
 		<developerConnection>scm:git:ssh://github.com/munoabr8/valueProject.git</developerConnection>
+ 
+		<connection>scm:git:ssh://github.com/munoabr8/valueProject.git</connection>
+ 
 	</scm>
 
 	<dependencies>
@@ -49,13 +60,29 @@
 			<artifactId>maven-scm-provider-gitexe</artifactId>
 			<version>2.0.1</version>
 		</dependency>
+ 
 
 	</dependencies>
 
 	<build>
 
 		<plugins>
+
+			<!--
+			https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
+
+
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-publish-plugin</artifactId>
+				<version>3.2.1</version>
+				<configuration>
+					<scmBranch>gh-pages</scmBranch>
+				</configuration>
+			</plugin>
+
+			<plugin>
+
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-publish-plugin</artifactId>
 				<version>3.2.1</version>
@@ -173,4 +200,6 @@
 	</reporting>
 
 
+ 
 </project>
+ 

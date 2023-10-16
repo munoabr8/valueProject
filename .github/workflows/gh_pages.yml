@@ -23,5 +23,5 @@ jobs:
  
 
      - name: Publishing page
-       run: mvn clean site:site site:stage scm-publish:publish-scm -f root/pom.xml
+       run: mvn clean site:site site:stage scm-publish:publish-scm site:deploy -f root/pom.xml
  

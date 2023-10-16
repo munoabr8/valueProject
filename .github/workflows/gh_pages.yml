@@ -20,13 +20,8 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
-
-     - name: Build and Test
-       run: mvn clean verify  --file root/pom.xml
-
-    # - name: Code Quality Analysis
-    #   run: mvn sonar:sonar
+ 
 
      - name: Check Code Coverage
-       run: mvn clean site:site site:stage scm-publish:publish-scm
+       run: mvn clean site:site site:stage scm-publish:publish-scm -f root/pom.xml
  

@@ -23,6 +23,6 @@ jobs:
         
 
 
-     - name: Publishing page
+     - name: Site and javadoc plugin working
        run: mvn clean site javadoc:javadoc -f root/pom.xml
  

@@ -1,4 +1,4 @@
-name: Maven site + site:stage + scm-publish
+name: Maven site + site:stage + javadoc + scm-publish
 
 on:
   push:

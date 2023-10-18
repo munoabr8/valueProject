@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class DataPreparer {
 	public static void main(String[] args) {
 
-		String fileName = "data.txt";
+		String fileName = "data.xml";
 		String path = "./" + fileName; // Relative path with a placeholder for the filename
 
 		String keyword = "berry";

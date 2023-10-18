@@ -1,0 +1,28 @@
+name: Maven site + java doc
+
+on:
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  build:
+
+    runs-on: macOS-latest  # Use macOS runner
+
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+     - name: Set up JDK 18
+       uses: actions/setup-java@v3
+       with:
+        java-version: '18'
+        distribution: 'temurin'
+        cache: 'maven'
+        
+
+
+     - name: Site and javadoc plugin working
+       run: mvn clean site javadoc:javadoc -f root/pom.xml
+ 

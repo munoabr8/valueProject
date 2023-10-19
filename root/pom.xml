@@ -13,11 +13,13 @@
 	</properties>
 
 
-	<distributionManagement>
+		<distributionManagement>
 
 		<site>
 			<id>Change me</id>
- 			<url>scm:git:ssh://git@github.com:munoabr8/valueProject.git</url>
+
+			<url>scm:git:https://github.com/munoabr8/valueProject.git</url>
+
 		</site>
 
 
@@ -28,6 +30,7 @@
 		</repository>
 
 	</distributionManagement>
+
 
 
 	<scm>

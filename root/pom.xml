@@ -18,7 +18,7 @@
 		<site>
 			<id>Change me</id>
 
-			<url>scm:git:ssh://github.com/munoabr8/valueProject.git</url>
+			<url>scm:git:github.com/munoabr8/valueProject.git</url>
 
 		</site>
 

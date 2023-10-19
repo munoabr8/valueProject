@@ -26,7 +26,7 @@ jobs:
           git config --global user.email "munoabr8@gmail.com"
           git config --global user.name "munoabr8"
           git config --global credential.helper 'store --file ~/.git-credentials'
-          echo "https://github.com:${{ secrets.GH_PAT }}" > ~/.git-credentials
+          echo "https://github.com:${{ secrets.SSH_PRIVATE_KEY }}" > ~/.git-credentials
 
      - name: Publishing java docs with site and scm-publish
        run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml

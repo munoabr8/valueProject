@@ -175,6 +175,7 @@
  
 	<modules>
 		<module>domain</module>
+		<module>unitTesting</module>
 	</modules>
 </project>
  

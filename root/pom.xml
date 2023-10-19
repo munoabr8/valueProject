@@ -36,7 +36,7 @@
 		<url>https://github.com/munoabr8/valueProject</url>
 
 
-		<connection>scm:git:https://github.com/munoabr8/valueProject.git</connection>
+		<connection>scm:git:ssh://github.com/munoabr8/valueProject.git</connection>
 
 		<developerConnection>scm:git:ssh://github.com/munoabr8/valueProject.git</developerConnection>
 	</scm>

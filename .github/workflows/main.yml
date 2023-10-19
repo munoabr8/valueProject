@@ -15,5 +15,5 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Validate SCM connection
-        run: mvn scm:validate
+        run: mvn scm:validate scm:status --file root/pom.xml
  

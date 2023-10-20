@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: integrationTesting.financialDataAccessAPI.FinancialDataClientTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.144 s <<< FAILURE! - in integrationTesting.financialDataAccessAPI.FinancialDataClientTest
+integrationTesting.financialDataAccessAPI.FinancialDataClientTest.testAddition  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.reflect.InaccessibleObjectException: Unable to make void integrationTesting.financialDataAccessAPI.FinancialDataClientTest.testAddition() accessible: module integrationTesting does not "opens integrationTesting.financialDataAccessAPI" to unnamed module @15c43bd9
+

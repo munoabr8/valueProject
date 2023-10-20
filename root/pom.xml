@@ -6,14 +6,19 @@
 	<artifactId>root</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
- 
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<modules>
+		<module>domain</module>
 
-		<distributionManagement>
+		<module>integrationTesting</module>
+	</modules>
+
+	<distributionManagement>
 
 		<site>
 			<id>Change me</id>
@@ -30,7 +35,6 @@
 		</repository>
 
 	</distributionManagement>
-
 
 
 	<scm>
@@ -52,74 +56,118 @@
 	</dependencies>
 
 	<build>
+		<pluginManagement>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-publish-plugin</artifactId>
-				<version>3.2.1</version>
-				<configuration>
-					<scmBranch>gh-pages</scmBranch>
-					<tryUpdate>true</tryUpdate>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>3.1.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<executable>java</executable>
+						<arguments>
+							<argument>--list-modules</argument>
+						</arguments>
+					</configuration>
+				</plugin>
 
-				</configuration>
-			</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-publish-plugin</artifactId>
+					<version>3.2.1</version>
+					<configuration>
+						<scmBranch>gh-pages</scmBranch>
+						<tryUpdate>true</tryUpdate>
 
-			<plugin>
+					</configuration>
+				</plugin>
 
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>2.0.1</version>
+				<plugin>
 
-
-				<configuration>
-
-					<connectionUrl>
-						scm:git:https://github.com/munoabr8/valueProject.git</connectionUrl>
-
-					<connectionType>connection</connectionType>
-
-					<scmVersion>main</scmVersion>
-
-				</configuration>
-
-			</plugin>
-
-			<plugin>
-
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>4.0.0-M10</version>
-				<configuration>
-					<port>9000</port>
-					<tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
-
-				</configuration>
-
-				<dependencies>
-					<dependency><!-- add support for ssh/scp -->
-						<groupId>org.apache.maven.wagon</groupId>
-						<artifactId>wagon-ssh</artifactId>
-						<version>1.0</version>
-					</dependency>
-				</dependencies>
-
-			</plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>2.0.1</version>
 
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
-				<configuration>
-					<source>18</source> <!-- Set to your desired Java version -->
-					<target>18</target>
-				</configuration>
-			</plugin>
+					<configuration>
+
+						<connectionUrl>
+							scm:git:https://github.com/munoabr8/valueProject.git</connectionUrl>
+
+						<connectionType>connection</connectionType>
+
+						<scmVersion>main</scmVersion>
+
+					</configuration>
+
+				</plugin>
+
+				<plugin>
+
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>4.0.0-M10</version>
+					<configuration>
+						<port>9000</port>
+						<tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+
+					</configuration>
+
+					<dependencies>
+						<dependency><!-- add support for ssh/scp -->
+							<groupId>org.apache.maven.wagon</groupId>
+							<artifactId>wagon-ssh</artifactId>
+							<version>1.0</version>
+						</dependency>
+					</dependencies>
+
+				</plugin>
 
 
-		</plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+					<configuration>
+						<source>18</source>
+						<target>18</target>
+						<verbose>true</verbose>
+						<compilerArgs>
+							<arg>--module-path</arg>
+							<arg>${project.build.directory}/domain</arg>
+							<arg>${project.build.directory}/integrationTesting</arg>
 
+						</compilerArgs>
+
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M5</version>
+					<dependencies>
+
+
+						<dependency>
+							<!-- I need to add this dependency -->
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-api</artifactId>
+							<version>3.0.0-M5</version>
+						</dependency>
+
+					</dependencies>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
 
 	</build>
 
@@ -172,9 +220,5 @@
 	</reporting>
 
 
- 
-	<modules>
-		<module>domain</module>
-	</modules>
 </project>
  

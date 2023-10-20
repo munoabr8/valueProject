@@ -1,0 +1,8 @@
+  module integrationTesting {
+
+	  requires domain;
+
+ 
+ 
+    
+}

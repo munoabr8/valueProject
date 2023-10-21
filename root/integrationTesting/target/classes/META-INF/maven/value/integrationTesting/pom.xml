@@ -8,16 +8,14 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>integrationTesting</artifactId>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
-			    <version>5.10.0</version>
+			<version>5.10.0</version>
 			<scope>test</scope>
 		</dependency>
-
-
 
 
 		<dependency>
@@ -26,4 +24,30 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
+
+	<build>
+		<pluginManagement>
+
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+					<configuration>
+
+						<verbose>false</verbose>
+						<compilerArgs>
+							<arg>--add-exports</arg>
+							<arg>domain/domain=integrationTesting</arg>
+
+
+						</compilerArgs>
+
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
 </project>

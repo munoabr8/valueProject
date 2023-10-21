@@ -27,5 +27,4 @@ jobs:
  
      - name: Run Checkstyle
        run: |
-          mvn -B package --file root/pom.xml
           mvn checkstyle:check --file root/pom.xml

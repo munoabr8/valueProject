@@ -18,7 +18,7 @@ public class FinancialDataClientTest {
 		
 
  	    @Test
- 	    void testAddition() {
+ 	    public void testAddition() {
 
  	    	int actual = classUnderTest.testMe();
  	    	

@@ -22,9 +22,9 @@ jobs:
         cache: 'maven'
 
      - name: Set up Environment
-      
-       run: |
+       env:    
          GH_PAT: ${{ secrets.GH_PAT }}
+
 
      - name: Set up "hub" Configuration
        run: |

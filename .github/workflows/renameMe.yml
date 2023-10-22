@@ -24,8 +24,9 @@ jobs:
      - name: Create gh-pages branch if it doesn't exist
        run: |
         git checkout -B gh-pages || git checkout -b gh-pages
-        git push -u origin gh-pages
+        git push -u origin gh-pages --force
 
+ 
 
         
      - name: Publish to GitHub Pages

@@ -26,5 +26,6 @@ jobs:
      - name: Publishing java docs with site and scm-publish
        run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml
        env:
-          DEPLOY_TOKEN: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          
  

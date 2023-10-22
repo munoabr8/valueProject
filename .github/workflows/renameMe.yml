@@ -25,6 +25,7 @@ jobs:
        run: |
         git checkout -B gh-pages || git checkout -b gh-pages
         git push -u origin gh-pages --force
+        hub api user
         
 
  

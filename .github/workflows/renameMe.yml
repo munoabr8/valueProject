@@ -20,6 +20,19 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
+
+     - name: Set up Environment
+       env:
+        GH_PAT: ${{ secrets.GH_TOKEN }}
+
+     - name: Set up "hub" Configuration
+       run: |
+        hub config --global hub.protocol https
+        hub config --global user.email "munoabr8@gmail.com"
+        hub config --global user.name "munoabr8"
+
+
+        
      
      - name: Create gh-pages branch if it doesn't exist
        run: |

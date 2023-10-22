@@ -51,7 +51,6 @@ jobs:
        run: |
         git config --global user.email "unoabr8@gmail.com"  # Replace with your email
         git config --global user.name "munoabr8"  # Replace with your name
-        git config --global credential.helper store
         git remote set-url origin https://github.com/${{ github.repository }}
         git fetch
         git checkout -B gh-pages || git checkout -b gh-pages

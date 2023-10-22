@@ -21,7 +21,13 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
         
- 
+     - name: Publish to GitHub Pages
+       run: |
+        git config user.email "munoabr8@gmail.com"
+        git config user.name "munoabr8"
+        git push --set-upstream origin gh-pages
+        env:
+         GH_PAT: ${{ secrets.GH_PAT }}   
 
      - name: Publishing java docs with site and scm-publish
        run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml
@@ -29,3 +35,4 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
           
  
+

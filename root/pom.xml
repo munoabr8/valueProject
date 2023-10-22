@@ -43,7 +43,7 @@
 
 		<connection>scm:git:https://github.com/munoabr8/valueProject.git</connection>
 
-		<developerConnection>scm:git:ssh://github.com/munoabr8/valueProject.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/munoabr8/valueProject.git</developerConnection>
 	</scm>
 
 	<dependencies>

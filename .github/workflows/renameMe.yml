@@ -25,6 +25,7 @@ jobs:
        run: |
         git checkout -B gh-pages || git checkout -b gh-pages
         git push -u origin gh-pages --force
+        
 
  
 
@@ -32,6 +33,8 @@ jobs:
      - name: Publish to GitHub Pages
        run: |
         git branch
+        git config --global user.email "munoabr8@example.com"
+        git config --global user.name "munoabr8"
  
 
      - name: Publishing java docs with site and scm-publish

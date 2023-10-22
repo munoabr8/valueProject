@@ -39,11 +39,7 @@ jobs:
  
 
      - name: Publishing java docs with site and scm-publish
-       run: |
-         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  
-     
-         run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml
+       run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml
    
           
  

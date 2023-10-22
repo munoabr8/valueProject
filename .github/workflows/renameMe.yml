@@ -33,7 +33,7 @@ jobs:
           git push -u origin gh-pages --force
           
       - name: Publishing java docs with site and scm-publish
-        run: mvn -X clean install
+        run: mvn -X clean install -f root/pom.xml
 
 
       #- name: Publishing java docs with site and scm-publish

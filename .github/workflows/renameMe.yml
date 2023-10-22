@@ -23,30 +23,25 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
-
   
-
      - name: Set up "hub" Configuration
        run: |
         hub config --global hub.protocol https
         hub config --global user.email "munoabr8@gmail.com"
         hub config --global user.name "munoabr8"
-
-
         
-     
+     - name: Authenticate hub using GITHUB_TOKEN
+       run: hub release
+       env:
+         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+   
      - name: Create gh-pages branch if it doesn't exist
        run: |
         git checkout -B gh-pages || git checkout -b gh-pages
         git push -u origin gh-pages --force
         export GITHUB_TOKEN="${{ secrets.GH_PAT }}"
         hub api user
-        
-
- 
-
-        
-   
+  
      - name: Configure Git with GitHub PAT
        run: |
         git config --global user.email "munoabr8@gmail.com"  # Replace with your email
@@ -57,14 +52,5 @@ jobs:
         git push -u origin gh-pages --force
         hub api user
   
-    
-   
-     
- 
-
      - name: Publishing java docs with site and scm-publish
        run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml
-   
-          
- 
-

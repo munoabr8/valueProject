@@ -49,7 +49,7 @@ jobs:
    
      - name: Configure Git with GitHub PAT
        run: |
-        git config --global user.email "unoabr8@gmail.com"  # Replace with your email
+        git config --global user.email "munoabr8@gmail.com"  # Replace with your email
         git config --global user.name "munoabr8"  # Replace with your name
         git remote set-url origin https://github.com/${{ github.repository }}
         git fetch

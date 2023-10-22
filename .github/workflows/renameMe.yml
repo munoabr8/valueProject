@@ -40,7 +40,7 @@ jobs:
         git checkout -B gh-pages || git checkout -b gh-pages
         git push -u origin gh-pages --force
         export GITHUB_TOKEN="${{ secrets.GH_PAT }}"
-        hub api user
+       # hub api user
   
      - name: Configure Git with GitHub PAT
        run: |

@@ -26,6 +26,7 @@ jobs:
   
      - name: Set up "hub" Configuration
        run: |
-        hub config --global github.com
+        hub browse
+        #hub config --global github.com
         #hub config --get-all github.com
         #hub api user        

@@ -36,5 +36,5 @@ jobs:
         run: mvn -X clean install
 
 
-      - name: Publishing java docs with site and scm-publish
+      #- name: Publishing java docs with site and scm-publish
         #run: mvn -X clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml

@@ -23,6 +23,7 @@ jobs:
         
      - name: Publish to GitHub Pages
        run: |
+        git branch
         git config user.name "munoabr8"
         git config user.email "munoabr8@gmail.com"
         git push --set-upstream origin gh-pages

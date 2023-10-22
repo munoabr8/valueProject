@@ -32,6 +32,5 @@ jobs:
           # Push the branch to GitHub
           git push -u origin gh-pages --force
 
-      - name: Publishing
-        run: |
-          # Your build and publishing steps go here
+      - name: Publishing java docs with site and scm-publish
+        run: mvn clean site:site site:stage javadoc:javadoc scm-publish:publish-scm -f root/pom.xml

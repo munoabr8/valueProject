@@ -1,32 +1,37 @@
-name: Maven site + site:stage + javadoc + scm-publish
+name: Example Workflow
 
 on:
   push:
     branches:
-      - main  # Replace with your main branch name
+      - main
 
 jobs:
   build:
-
-    runs-on: macOS-latest  # Use macOS runner
-
-    env:
-      GH_PAT: ${{ secrets.GH_PAT }}
+    runs-on: macos-latest
 
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-     - name: Set up JDK 18
-       uses: actions/setup-java@v3
-       with:
-        java-version: '18'
-        distribution: 'temurin'
-        cache: 'maven'
-  
-     - name: Set up "hub" Configuration
-       run: |
-        hub browse
-        #hub config --global github.com
-        #hub config --get-all github.com
-        #hub api user        
+      - name: Set up Environment
+        env:
+          GH_PAT: ${{ secrets.GITHUB_TOKEN }}  # Use your secret name here
+        run: |
+          # Configure Git with your GitHub PAT
+          git config --global user.email "munaobr8@gmail.com"
+          git config --global user.name "munoabr8"
+          git config --global credential.helper store  # This is optional
+
+          # Set the remote URL to your repository with the PAT
+          git remote set-url origin "https://munoabr8:${GH_PAT}@github.com/munoabr8/valueProject.git"
+
+          # Fetch and switch to the branch, creating it if necessary
+          git fetch
+          git checkout -B gh-pages || git checkout -b gh-pages
+
+          # Push the branch to GitHub
+          git push -u origin gh-pages --force
+
+      - name: Publishing
+        run: |
+          # Your build and publishing steps go here

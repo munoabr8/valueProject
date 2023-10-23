@@ -1,0 +1,47 @@
+@options
+@argfile
+--class-path
+'/Users/abrahammunoz/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-provider-gitexe/2.0.1/maven-scm-provider-gitexe-2.0.1.jar:/Users/abrahammunoz/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/abrahammunoz/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/abrahammunoz/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/abrahammunoz/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-provider-git-commons/2.0.1/maven-scm-provider-git-commons-2.0.1.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-api/2.0.1/maven-scm-api-2.0.1.jar'
+--module-path
+'/Users/abrahammunoz/git/valueProject/root/domain/target/classes:/Users/abrahammunoz/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar:/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/classes'
+--patch-module
+integrationTesting='/Users/abrahammunoz/git/valueProject/root/integrationTesting/src/main/java'
+-encoding
+'UTF-8'
+-protected
+--module-source-path
+'/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'integrationTesting 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'integrationTesting 0.0.1-SNAPSHOT API'
+'/Users/abrahammunoz/git/valueProject/root/integrationTesting/src/main/java/module-info.java'
+'/Users/abrahammunoz/git/valueProject/root/integrationTesting/src/main/java/integrationTesting/main/JavaDocsDummy.java'
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/tag-search-index.js = 1698022288484
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/overview-tree.html = 1698022288478
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/module-search-index.js = 1698022288483
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/index.html = 1698022288487
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/package-search-index.js = 1698022288483
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/jquery-ui.overrides.css = 1698022288494
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/index-all.html = 1698022288486
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/allpackages-index.html = 1698022288483
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/member-search-index.js = 1698022288484
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/copy.svg = 1698022288490
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/script.js = 1698022288490
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/stylesheet.css = 1698022288490
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/help-doc.html = 1698022288489
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/element-list = 1698022288464
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/allclasses-index.html = 1698022288482
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/type-search-index.js = 1698022288483
+/Users/abrahammunoz/git/valueProject/root/integrationTesting/target/site/apidocs/search.js = 1698022288491

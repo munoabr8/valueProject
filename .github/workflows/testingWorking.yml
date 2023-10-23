@@ -1,0 +1,26 @@
+name:  Testing
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+         java-version: '18'
+         distribution: 'temurin'
+         cache: 'maven'
+
+ 
+ 
+      - name: Publishing java docs with site and scm-publish
+        run: mvn -X clean test -f root/pom.xml

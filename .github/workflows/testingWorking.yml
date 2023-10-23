@@ -22,5 +22,5 @@ jobs:
 
  
  
-      - name: Publishing java docs with site and scm-publish
+      - name: Test
         run: mvn -X clean test -f root/pom.xml

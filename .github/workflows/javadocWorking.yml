@@ -1,4 +1,4 @@
-name: Maven site + java doc
+name: 
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: Maven SCM validation
+name: Maven SCM validation 
 
 on:
   push:

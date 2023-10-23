@@ -31,6 +31,9 @@ jobs:
 
           # Push the branch to GitHub
           git push -u origin gh-pages --force
+
+      - name: Maven version
+        run: mvn -version
           
       - name: Publishing java docs with site and scm-publish
         run: mvn -X clean install -f root/pom.xml

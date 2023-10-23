@@ -23,4 +23,4 @@ jobs:
  
  
       - name: Test
-        run: mvn -X clean test -f root/pom.xml
+        run: mvn -X clean surefire:surefire -f root/pom.xml

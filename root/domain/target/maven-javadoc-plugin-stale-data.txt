@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @options
 @packages
 @argfile
@@ -48,3 +49,6 @@ dataPrep.transformation
 /Users/abrahammunoz/git/valueProject/root/domain/target/site/apidocs/allclasses-index.html = 1698022287356
 /Users/abrahammunoz/git/valueProject/root/domain/target/site/apidocs/type-search-index.js = 1698022287357
 /Users/abrahammunoz/git/valueProject/root/domain/target/site/apidocs/search.js = 1698022287366
+=======
+
+>>>>>>> a902b32ca9fc584bf527affa2272734628d49f8a

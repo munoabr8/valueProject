@@ -1,4 +1,4 @@
-name: Maven site + site:stage + scm-publish
+name: Javadoc 
 
 on:
   push:
@@ -20,8 +20,9 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: 'maven'
+        
 
 
-     - name: Publishing page
-       run: mvn clean site:site site:stage scm-publish:publish-scm -f root/pom.xml
+     - name: Site and javadoc plugin working
+       run: mvn clean site javadoc:javadoc -f root/pom.xml
  

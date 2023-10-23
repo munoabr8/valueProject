@@ -73,8 +73,8 @@
 					<configuration>
 						<executable>java</executable>
 						<arguments>
-							<argument>--list-modules</argument>
-						</arguments>
+ 
+						</arguments>					
 					</configuration>
 				</plugin>
 
@@ -134,7 +134,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-    						<version>3.11.0</version>
+						<version>3.8.1</version>
 					<configuration>
 						<source>18</source>
 						<target>18</target>

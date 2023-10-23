@@ -28,7 +28,7 @@ jobs:
           # Configure Git with your GitHub PAT
           git config --global user.email "munaobr8@gmail.com"
           git config --global user.name "munoabr8"
-          git config --global credential.helper store  # This is optional
+          #git config --global credential.helper store  # This is optional
 
           # Set the remote URL to your repository with the PAT
           git remote set-url origin "https://munoabr8:${GH_PAT}@github.com/munoabr8/valueProject.git"

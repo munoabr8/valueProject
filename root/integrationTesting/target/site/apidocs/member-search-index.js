@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"integrationTesting.main","c":"JavaDocsDummy","l":"JavaDocsDummy()","u":"%3Cinit%3E()"}];updateSearchResults();

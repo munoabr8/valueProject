@@ -1,4 +1,6 @@
 What:
+
+Assume we are in module named: integrationTesting.
 	<build>
 		<pluginManagement>
 

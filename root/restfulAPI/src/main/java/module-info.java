@@ -4,10 +4,10 @@ module restfulAPI {
 	requires transitive interfaceAdapters;
 	requires transitive spring.beans;
 	requires transitive spring.web;
-	requires spring.core;
-	
-	//  requires spring.web;
-	 //   requires spring.boot;
-	 //   requires spring.boot.autoconfigure;
-  	
+	requires    spring.core;
+	requires    spring.boot.autoconfigure;
+	requires    spring.boot;
+	requires    spring.context;
+
+  opens financialData.iex to  spring.core;
 }

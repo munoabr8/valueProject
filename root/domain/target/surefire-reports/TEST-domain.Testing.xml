@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="domain.Testing" time="0.01" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="domain.Testing" time="0.008" tests="0" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="20"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Users/abrahammunoz/Desktop/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_20.0.1.v20230425-1611/jre/lib"/>
-    <property name="sun.java.command" value="/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire/surefirebooter17570822301472854835.jar /Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire 2023-10-26T13-45-02_335-jvmRun1 surefire8935323462342108812tmp surefire_010382120479703794491tmp"/>
+    <property name="sun.java.command" value="/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire/surefirebooter4544819710680778677.jar /Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire 2023-10-26T14-19-38_748-jvmRun1 surefire335283917811100095tmp surefire_017009812105635326640tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/test-classes:/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/classes:/Users/abrahammunoz/.m2/repository/com/squareup/okhttp3/okhttp/4.10.0/okhttp-4.10.0.jar:/Users/abrahammunoz/.m2/repository/com/squareup/okio/okio-jvm/3.0.0/okio-jvm-3.0.0.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.5.31/kotlin-stdlib-jdk8-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.5.31/kotlin-stdlib-jdk7-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.31/kotlin-stdlib-common-1.5.31.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.6.20/kotlin-stdlib-1.6.20.jar:/Users/abrahammunoz/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-provider-gitexe/2.0.1/maven-scm-provider-gitexe-2.0.1.jar:/Users/abrahammunoz/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/abrahammunoz/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/abrahammunoz/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/abrahammunoz/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/abrahammunoz/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-provider-git-commons/2.0.1/maven-scm-provider-git-commons-2.0.1.jar:/Users/abrahammunoz/.m2/repository/org/apache/maven/scm/maven-scm-api/2.0.1/maven-scm-api-2.0.1.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire/surefirebooter17570822301472854835.jar"/>
+    <property name="surefire.real.class.path" value="/Users/abrahammunoz/git/valueProject_pro2/root/domain/target/surefire/surefirebooter4544819710680778677.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="20.0.1+9"/>

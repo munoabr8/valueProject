@@ -1,0 +1,6 @@
+--add-exports
+domain/domain=integrationTesting
+--patch-module
+integrationTesting=_
+--add-reads
+integrationTesting=ALL-UNNAMED

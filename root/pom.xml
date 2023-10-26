@@ -16,6 +16,8 @@
 		<module>domain</module>
 
 		<module>integrationTesting</module>
+		<module>interfaceAdapaters</module>
+		<module>financialDataAccess</module>
 	</modules>
 
 	<distributionManagement>

@@ -1,0 +1,4 @@
+module-info.class
+interfaceAdapaters/url/UrlBuilder.class
+interfaceAdapaters/url/StockUrlBuilder.class
+interfaceAdapaters/url/IexApiProperties.class

@@ -16,8 +16,10 @@
 		<module>domain</module>
 
 		<module>integrationTesting</module>
-		<module>interfaceAdapaters</module>
-		<module>financialDataAccess</module>
+
+ 		<module>interfaceAdapters</module>
+
+ 		<module>restfulAPI</module>
 	</modules>
 
 	<distributionManagement>

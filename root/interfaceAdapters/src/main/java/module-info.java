@@ -1,0 +1,6 @@
+module interfaceAdapters {
+	
+	
+	exports urlBuilder;
+}
+

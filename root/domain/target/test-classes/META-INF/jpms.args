@@ -1,6 +1,0 @@
---add-exports
-okhttp3/okhttp3=domain
---patch-module
-domain=_
---add-reads
-domain=ALL-UNNAMED

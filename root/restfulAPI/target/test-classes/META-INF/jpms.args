@@ -1,0 +1,4 @@
+--patch-module
+restfulAPI=_
+--add-reads
+restfulAPI=ALL-UNNAMED

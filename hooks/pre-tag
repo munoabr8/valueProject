@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Prompt the user for a custom commit message
+read -p "Enter a commit message: " COMMIT_MESSAGE
+
+# Stage all changes in the working directory
+git add .
+
+# Commit the staged changes with the custom commit message
+git commit -m "$COMMIT_MESSAGE"
+
+# Read the current version number from version.txt
+VERSION=$(<version.txt)
+
+# Create a Git tag based on the version number with the custom commit message
+git tag -a "$VERSION" -m "$COMMIT_MESSAGE"
+
+# Push the tag to the remote repository
+git push origin "$VERSION"
+

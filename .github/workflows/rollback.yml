@@ -1,0 +1,35 @@
+name: Rollback on Failed Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rollback:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Set up JDK 18
+        uses: actions/setup-java@v3
+        with:
+         java-version: '18'
+         distribution: 'temurin'
+         cache: 'maven'
+
+
+ 
+      - name: Attempt to push changes
+        run: |
+          if ! git push origin main; then
+            echo "Push failed, performing rollback"
+            PREVIOUS_VERSION=$(git describe --abbrev=0 --tags)
+            git reset --hard "$PREVIOUS_VERSION"
+            git tag -d "$PREVIOUS_VERSION"
+            git push --delete origin "$PREVIOUS_VERSION"
+          fi
+        env:
+          GH_PAT: ${{ secrets.GITHUB_TOKEN }}  # Use your secret name here
